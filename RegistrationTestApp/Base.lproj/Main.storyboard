@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IeC-XA-cg9">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArialRoundedMTProCyr-Bold.otf">
+            <string>ArialRoundedMTProCyr-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="bsM-HF-x8c">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="IeC-XA-cg9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CSU-S2-hCc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="78f-92-qy7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rlk-dA-ZPF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-690" y="143"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RTAMainViewController" customModule="RegistrationTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcW-4h-Mbx">
+                                <rect key="frame" x="114.33333333333333" y="195" width="185.66666666666669" height="29"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTProCyr-Bold" family="Arial Rounded MT Pro Cyr" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zb-aT-4Ep" customClass="RTACustomTextField" customModule="RegistrationTestApp" customModuleProvider="target">
+                                <rect key="frame" x="30" y="255" width="354" height="64"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="ir4-v3-K9o"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="email"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundCornerRadius" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="nextResponderField" destination="sFx-5c-vEq" id="RNG-cK-oGP"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFx-5c-vEq" customClass="RTACustomTextField" customModule="RegistrationTestApp" customModuleProvider="target">
+                                <rect key="frame" x="30" y="333" width="354" height="64"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="1gg-Qc-phg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="password"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundCornerRadius" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="nextResponderField" destination="Lhk-IV-jWF" id="J5X-DO-wIz"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5Q-Rk-Jyi">
+                                <rect key="frame" x="32" y="489" width="350" height="60"/>
+                                <color key="backgroundColor" red="0.88235294117647056" green="0.9882352941176471" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ODy-I7-9Fb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTProCyr-Bold" family="Arial Rounded MT Pro Cyr" pointSize="17"/>
+                                <state key="normal" title="ЗАРЕГИСТРИРОВАТЬСЯ">
+                                    <color key="titleColor" red="0.082352941176470587" green="0.78823529411764703" blue="0.72549019607843135" alpha="0.5" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundCornerRadius" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registartionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W5K-cG-wdv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lg4-HU-Bby">
+                                <rect key="frame" x="32" y="609" width="164.66666666666666" height="60"/>
+                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" image="faceboookIcon"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundCornerRadius" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVQ-Tk-4nt">
+                                <rect key="frame" x="217.66666666666663" y="609" width="164.33333333333337" height="60"/>
+                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <state key="normal" image="vkIcon"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundCornerRadius" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhk-IV-jWF" customClass="RTACustomTextField" customModule="RegistrationTestApp" customModuleProvider="target">
+                                <rect key="frame" x="30" y="411" width="354" height="64"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="TL0-Nb-rUh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="name"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isRoundCornerRadius" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="R5Q-Rk-Jyi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="1Y5-NY-gNQ"/>
+                            <constraint firstItem="vcW-4h-Mbx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2F8-zL-qRK"/>
+                            <constraint firstItem="Lg4-HU-Bby" firstAttribute="height" secondItem="R5Q-Rk-Jyi" secondAttribute="height" id="3cG-f8-5Vh"/>
+                            <constraint firstItem="Lg4-HU-Bby" firstAttribute="top" secondItem="R5Q-Rk-Jyi" secondAttribute="bottom" constant="60" id="4Q4-eh-YQL"/>
+                            <constraint firstItem="DVQ-Tk-4nt" firstAttribute="height" secondItem="Lg4-HU-Bby" secondAttribute="height" id="6Cq-Zg-pwV"/>
+                            <constraint firstItem="Lhk-IV-jWF" firstAttribute="top" secondItem="sFx-5c-vEq" secondAttribute="bottom" constant="14" id="8JC-Ll-tTL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R5Q-Rk-Jyi" secondAttribute="trailing" constant="32" id="9IA-7X-R0v"/>
+                            <constraint firstItem="Lhk-IV-jWF" firstAttribute="trailing" secondItem="4zb-aT-4Ep" secondAttribute="trailing" id="CRa-H1-bsS"/>
+                            <constraint firstItem="DVQ-Tk-4nt" firstAttribute="trailing" secondItem="R5Q-Rk-Jyi" secondAttribute="trailing" id="Kvp-Q9-UKf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4zb-aT-4Ep" secondAttribute="trailing" constant="30" id="PUm-5o-J04"/>
+                            <constraint firstItem="DVQ-Tk-4nt" firstAttribute="width" secondItem="Lg4-HU-Bby" secondAttribute="width" id="VoX-5Y-6i3"/>
+                            <constraint firstItem="sFx-5c-vEq" firstAttribute="leading" secondItem="4zb-aT-4Ep" secondAttribute="leading" id="YlX-sR-fhK"/>
+                            <constraint firstItem="4zb-aT-4Ep" firstAttribute="top" secondItem="vcW-4h-Mbx" secondAttribute="bottom" constant="31" id="a43-4a-Lub"/>
+                            <constraint firstItem="4zb-aT-4Ep" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="aNc-MJ-tMj"/>
+                            <constraint firstItem="Lg4-HU-Bby" firstAttribute="leading" secondItem="R5Q-Rk-Jyi" secondAttribute="leading" id="eBJ-O5-BaY"/>
+                            <constraint firstItem="sFx-5c-vEq" firstAttribute="trailing" secondItem="4zb-aT-4Ep" secondAttribute="trailing" id="gtN-1Z-4t0"/>
+                            <constraint firstItem="R5Q-Rk-Jyi" firstAttribute="top" secondItem="Lhk-IV-jWF" secondAttribute="bottom" constant="14" id="hgT-Qw-Kwe"/>
+                            <constraint firstItem="sFx-5c-vEq" firstAttribute="top" secondItem="4zb-aT-4Ep" secondAttribute="bottom" constant="14" id="hol-fo-2nj"/>
+                            <constraint firstItem="vcW-4h-Mbx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="195" id="iGx-HY-3Lm"/>
+                            <constraint firstItem="DVQ-Tk-4nt" firstAttribute="top" secondItem="Lg4-HU-Bby" secondAttribute="top" id="iH3-LJ-mXy"/>
+                            <constraint firstItem="Lhk-IV-jWF" firstAttribute="leading" secondItem="4zb-aT-4Ep" secondAttribute="leading" id="v1G-Tm-E8B"/>
+                            <constraint firstItem="Lg4-HU-Bby" firstAttribute="width" secondItem="R5Q-Rk-Jyi" secondAttribute="width" multiplier="0.47" id="xs7-of-C1d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="LnW-5x-cSb" appends="YES" id="OiF-1y-8QT"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="zax-Wb-YQ6"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="4zb-aT-4Ep" id="OuL-hh-Rwn"/>
+                        <outlet property="nameTextField" destination="Lhk-IV-jWF" id="fUL-FJ-NcF"/>
+                        <outlet property="passwordTextField" destination="sFx-5c-vEq" id="f8F-gu-f4d"/>
+                        <segue destination="GBd-FK-bsN" kind="show" identifier="showUsersScreen" id="I2Y-kk-Cuh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="LnW-5x-cSb">
+                    <connections>
+                        <action selector="tapGestureDone:" destination="BYZ-38-t0r" id="Diy-DW-GoC"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="144.92753623188406" y="142.63392857142856"/>
+        </scene>
+        <!--Users-->
+        <scene sceneID="aSo-C5-jMs">
+            <objects>
+                <tableViewController title="Users" id="GBd-FK-bsN" customClass="RTAUsersTableViewController" customModule="RegistrationTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BIT-Pq-EDX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RTAUserTableViewCell" rowHeight="72" id="APt-HC-G6N" customClass="RTAUserTableViewCell" customModule="RegistrationTestApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="72"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="APt-HC-G6N" id="992-do-PC3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FR6-Aq-rkS">
+                                            <rect key="frame" x="20" y="11" width="57" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="CkH-mb-Loo"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbL-X2-c40">
+                                            <rect key="frame" x="20" y="40" width="57" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="wCN-lc-bqC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTProCyr-Bold" family="Arial Rounded MT Pro Cyr" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXP-2k-pZv">
+                                            <rect key="frame" x="85" y="11" width="50.333333333333343" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="7s1-Ls-LHS"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3J-aM-xq5">
+                                            <rect key="frame" x="85" y="40" width="50.333333333333343" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="sCH-it-WBg"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTProCyr-Bold" family="Arial Rounded MT Pro Cyr" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DXP-2k-pZv" firstAttribute="top" secondItem="FR6-Aq-rkS" secondAttribute="top" id="14l-FM-YA2"/>
+                                        <constraint firstItem="DXP-2k-pZv" firstAttribute="leading" secondItem="FR6-Aq-rkS" secondAttribute="trailing" constant="8" id="5M1-vW-hP1"/>
+                                        <constraint firstItem="LbL-X2-c40" firstAttribute="trailing" secondItem="FR6-Aq-rkS" secondAttribute="trailing" id="LqP-xF-k2Q"/>
+                                        <constraint firstItem="LbL-X2-c40" firstAttribute="leading" secondItem="FR6-Aq-rkS" secondAttribute="leading" id="Pbb-oC-bo9"/>
+                                        <constraint firstAttribute="bottom" secondItem="LbL-X2-c40" secondAttribute="bottom" constant="11" id="SfE-Pe-bQc"/>
+                                        <constraint firstItem="G3J-aM-xq5" firstAttribute="trailing" secondItem="DXP-2k-pZv" secondAttribute="trailing" id="Tfx-sn-USX"/>
+                                        <constraint firstItem="LbL-X2-c40" firstAttribute="top" secondItem="FR6-Aq-rkS" secondAttribute="bottom" constant="8" id="WtQ-nj-EQ1"/>
+                                        <constraint firstItem="FR6-Aq-rkS" firstAttribute="leading" secondItem="992-do-PC3" secondAttribute="leading" constant="20" id="XUK-OA-L1P"/>
+                                        <constraint firstItem="G3J-aM-xq5" firstAttribute="leading" secondItem="DXP-2k-pZv" secondAttribute="leading" id="dkC-ne-skE"/>
+                                        <constraint firstItem="G3J-aM-xq5" firstAttribute="top" secondItem="DXP-2k-pZv" secondAttribute="bottom" constant="8" id="h9i-ik-9Np"/>
+                                        <constraint firstItem="FR6-Aq-rkS" firstAttribute="top" secondItem="992-do-PC3" secondAttribute="top" constant="11" id="tMe-dm-msf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="emailLabel" destination="DXP-2k-pZv" id="9bJ-ax-mdy"/>
+                                    <outlet property="nameLabel" destination="G3J-aM-xq5" id="vTB-IG-H6D"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GBd-FK-bsN" id="KSm-OE-yYI"/>
+                            <outlet property="delegate" destination="GBd-FK-bsN" id="QZi-it-HjG"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHV-rX-LFO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.9710144927537" y="142.63392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="faceboookIcon" width="13" height="24"/>
+        <image name="vkIcon" width="24" height="14"/>
+    </resources>
+</document>
